@@ -1,6 +1,9 @@
-export function HangmanWord(): JSX.Element {
-  const wordToGuess = "TEST"
-  const guessedLetters = ["T", "E"]
+type HangmanWordProps = {
+  guessedLetters: string[]
+  wordToGuess: string
+}
+
+export function HangmanWord({ guessedLetters, wordToGuess }: HangmanWordProps) {
   return (
     <div
       style={{
